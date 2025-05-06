@@ -1,5 +1,6 @@
 "use client"
 
+import CarouselContainer from '@/components/carouselContainer';
 import { createCategory, fetchCategories, fetchProducts } from '@/lib/data';
 import React, { useEffect } from 'react'
 
@@ -22,7 +23,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>HomePage</div>
+    <div className="max-w-6xl mx-auto">
+      <CarouselContainer />
+    </div>
+
   )
 }
 
