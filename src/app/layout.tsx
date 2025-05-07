@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
+import "./globals.css";
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
+});
 
 export const metadata: Metadata = {
   title: "Best E-commerce Platform | Buy & Gift",
@@ -12,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
+    <html lang="en" className={montserrat.variable}>
+      <body className={`antialiased font-montserrat`}>
         {children}
       </body>
     </html>
